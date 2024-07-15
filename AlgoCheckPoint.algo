@@ -1,0 +1,27 @@
+ALGORITHM  read_Sentence
+VAR
+    Sentence : STRING := "Hello my name is Refka.";
+    vowels : STRING := "aeuioy" 
+    L : INTEGER := Sentence.length-1 ;
+    v : INTEGER := vowels.length-1
+    i , word , j : INTEGER;
+    NumberVOWEL : INTEGER := 0;
+BEGIN
+    Read(Sentence);
+FOR i FROM 0 TO L STEP 1 DO
+    IF (Sentence[i]=" ") THEN
+    word := word +1 ;
+    END_IF
+END_FOR
+FOR i FROM 0 TO L STEP 1 DO
+    FOR j  FROM 0 TO v STEP 1  DO
+        IF (vowels[j] = Sentence[i]) THEN
+            NumberVOWEL:= NumberVOWEL+1
+        END_IF
+    END_FOR
+END_FOR
+
+    write(word+1)
+    write(L+1)
+    write(NumberVOWEL)
+END
